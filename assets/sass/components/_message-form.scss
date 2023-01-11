@@ -24,6 +24,12 @@
     left: 0;
     right: 0;
     margin: auto;
+    border: 0.5rem solid transparent;
+  }
+  &:hover {
+    .message-form-top {
+      border-color: var(--secondary-bg);
+    }
   }
   .message-input-wrap {
     margin-bottom: 2rem;

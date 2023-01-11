@@ -769,6 +769,10 @@ Reuseble Components CSS
   left: 0;
   right: 0;
   margin: auto;
+  border: 0.5rem solid transparent;
+}
+.message-form:hover .message-form-top {
+  border-color: var(--secondary-bg);
 }
 .message-form .message-input-wrap {
   margin-bottom: 2rem;
