@@ -1,0 +1,141 @@
+@charset "UTF-8";
+/*---------------------------------------------------------------------------------
+
+    Theme Name: Car Service & Reapir
+    Author: Quomodosoft
+    Support: https://support.quomodosoft.com/support/login
+    Description: Car Service & Reapir HTML Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+============ TABLE OF CONTENTS ============
+
+01. Variables CSS
+02. Basic Setup CSS
+03. Reuseble Class CSS 
+04. Typography CSS 
+05. Background Color CSS
+06. Preloader CSS 
+07. Button CSS 
+08. Open, Close Time CSS 
+09. Pagination CSS 
+10. Title Line CSS 
+11. Search Box CSS 
+12. Profile Card CSS 
+13. Social Media CSS 
+14. Post Card CSS 
+15. Categories Card CSS 
+16. Tag Card CSS 
+17. News Card CSS 
+18. Contact CSS 
+19. Header CSS 
+20. Contact Bar CSS 
+21. Service CSS 
+22. Service Center CSS 
+23. Mechanic CSS 
+24. Check Services CSS 
+25. Packages CSS 
+26. Testimonial CSS 
+27. FAQ CSS 
+28. Subscribe CSS 
+29. Footer CSS 
+30. Home 1 Page CSS 
+31. Home 2 Page CSS 
+32. About Page CSS 
+33. Services Page CSS 
+34. Single Service Page CSS 
+35. Team Member Page CSS 
+36. Packages Page CSS 
+37. Blog Page CSS 
+38. Blog 2 Page CSS 
+39. Blog Details Page CSS 
+40. Contact Page CSS 
+41. Error Page CSS 
+
+======================================================================/
+*/
+
+
+/* 
+===============================================
+01. Variables CSS
+===============================================
+*/
+:root {
+  /*_______ Font Family _______*/
+  --primary-font-500: "DM Sans 500";
+  --primary-font-400: "DM Sans 400";
+  --secondary-font-700: "Poppins 700";
+  --secondary-font-600: "Poppins 600";
+  --secondary-font-500: "Poppins 500";
+  --secondary-font-400: "Poppins 400";
+
+  /*________ Font Size ________*/
+  --size-4xl: 6rem;
+  --size-3xl: 4.2rem;
+  --size-2xl: 2.2rem;
+  --size-xl: 2rem;
+  --size-lg: 1.8rem;
+  --size-md: 1.6rem;
+  --size-sm: 1.4rem;
+
+  /*________ Text Color ________*/
+  --primary-color: #1b1b1b;
+  --secondary-color: #ffffff;
+  --third-color: #ee2852;
+  --four-color: #545454;
+  --five-color: #D9D9D9;
+  --six-color: #9AA2B1;
+
+  /*_________ BG Color _________*/
+  --primary-bg: #ffffff;
+  --secondary-bg: #ee2852;
+  --third-bg: #1B1B1B;
+
+  /*_________ Border Color _________*/
+  --border-color1: #ededed;
+}
+
+@media #{$xl} {
+  :root {
+    --size-4xl: 5rem;
+  }
+}
+
+@media #{$lg} {
+  :root {
+    --size-4xl: 4rem;
+    --size-2xl: 2rem;
+  }
+}
+
+@media #{$md} {
+  :root {
+    --size-xl: 1.8rem;
+  }
+}
+
+@media #{$sm} {
+  :root {
+    --size-4xl: 3.1rem;
+    --size-3xl: 3.3rem;
+    --size-lg: 1.6rem;
+  }
+}
+
+@media #{$xsm} {
+  :root {
+    --size-4xl: 3rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  :root {
+    --size-3xl: 3rem;
+  }
+}
+
+
+
+

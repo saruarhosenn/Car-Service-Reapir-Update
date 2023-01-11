@@ -1,0 +1,105 @@
+/* 
+=========================================================
+30. Home 1 Page CSS
+=========================================================
+*/
+.hom1-banner {
+  background: linear-gradient(
+      96.21deg,
+      #142242 4.2%,
+      rgba(20, 34, 66, 0.27) 97.37%
+    ),
+    url("../images/banner/home1-banner.jpg") no-repeat top / cover;
+  padding: 15rem 0 27rem;
+  // @media #{$xl} {
+  //   padding: 23rem 0 25rem;
+  // }
+
+  // @media #{$md} {
+  //   padding: 20rem 0 24rem;
+  // }
+
+  // @media #{$sm} {
+  //   padding: 15rem 0 22rem;
+  // }
+
+  // @media #{$xsm} {
+  //   padding: 15rem 0 20rem;
+  // }
+  .banner-content {
+    .banner-title {
+      .white-shape {
+        position: absolute;
+        top: -10rem;
+        left: -12rem;
+        animation: hero-circle 8s linear 0s infinite alternate;
+        @keyframes hero-circle {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      }
+    }
+    .banner-desc {
+      margin: 1.3rem 0 5rem;
+      line-height: 1.8;
+    }
+    .banner-btn {
+      // .banner-btn-link {
+      //   @media only screen and (max-width: 350px) {
+      //     padding-left: 1.6rem;
+      //     padding-right: 1.6rem;
+      //   }
+      // }
+      .banner-btn-1 {
+        margin-right: 2.5rem;
+        @media only screen and (max-width: 350px) {
+          // margin-right: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+.down-mark-line {
+	position: relative;
+	z-index: 2;
+	display: inline-block;
+	&::before {
+		position: absolute;
+		content: "";
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		z-index: -1;
+		height: 100%;
+		background: url(../img/icon/down-mark-line.png);
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+		-webkit-animation: section-animation 3s infinite;
+		animation: section-animation 3s infinite;
+	}
+}
+@keyframes section-animation {
+	0% {
+		width: 0;
+	}
+	15% {
+		width: 100%;
+	}
+	85% {
+		opacity: 1;
+	}
+	90% {
+		width: 100%;
+		opacity: 0;
+	}
+	to {
+		width: 0;
+		opacity: 0;
+	}
+}

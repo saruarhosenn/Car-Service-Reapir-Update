@@ -1,0 +1,133 @@
+/* 07. Button CSS
+----------------------*/
+/*- NavBar Button -*/
+.navbar-btn-link {
+  padding: 0rem 3.9rem;
+  height: 8rem;
+}
+
+/*- Link Button -*/
+.link-btn {
+  text-align: center;
+  padding: 1.6rem 3rem;
+  font-family: var(--secondary-font-600);
+  font-size: var(--size-lg);
+  line-height: 1.5;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  border-radius: 0.4rem;
+  background-color: var(--secondary-bg);
+  @media #{$lg} {
+    padding: 1.4rem 2rem;
+  }
+}
+
+.btn-hover:hover {
+  background-color: var(--primary-bg);
+  color: var(--third-color);
+}
+
+.white-btn {
+  background-color: var(--primary-bg);
+  color: var(--third-color);
+  &:hover {
+    background-color: var(--secondary-bg);
+    color: var(--secondary-color);
+  }
+}
+
+/*- Pulse Button -*/
+.pulse-btn {
+  position: relative;
+  width: 13rem;
+  height: 13rem;
+  @media #{$xxl} {
+    width: 9rem;
+    height: 9rem;
+  }
+  @media #{$lg} {
+    width: 8rem;
+    height: 8rem;
+  }
+  img {
+    position: relative;
+    z-index: 99;
+    @media #{$xxl} {
+      width: 2.5rem;
+      height: 3rem;
+    }
+    @media #{$lg} {
+      width: 2rem;
+      height: 2.8rem;
+    }
+  }
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    z-index: 9;
+    border: 0.1rem solid var(--third-bg);
+    z-index: 1;
+    -webkit-animation: pulse-btn-animate 4s linear infinite;
+    animation: pulse-btn-animate 4s linear infinite;
+    &:nth-child(2) {
+      -webkit-animation-delay: 1s;
+      animation-delay: 1s;
+    }
+    &:nth-child(3) {
+      -webkit-animation-delay: 2s;
+      animation-delay: 2s;
+    }
+
+    &:nth-child(4) {
+      -webkit-animation-delay: 3s;
+      animation-delay: 3s;
+    }
+  }
+}
+
+@-webkit-keyframes pulse-btn-animate {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse-btn-animate {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(2.5);
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/*- Slider Pagination -*/
+.swiper-pagination {
+  position: static;
+  margin-top: 3rem;
+  span {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: var(--bg-8);
+    border-radius: 50%;
+    opacity: 1;
+    margin: 0 0.3rem !important;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--third-bg) !important;
+  }
+}

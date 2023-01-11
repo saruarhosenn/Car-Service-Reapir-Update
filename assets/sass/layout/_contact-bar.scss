@@ -1,0 +1,39 @@
+/* 20. Contact Bar CSS
+----------------------*/
+.contact-location-time {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.contact-location-time-row {
+  border-radius: 1.2rem 1.2rem 0 0;
+  padding: 3.5rem 5.5rem;
+  .contact-col-30 {
+    width: 30%;
+  }
+  .contact-col-40 {
+    width: 40%;
+  }
+}
+
+.contact {
+  .contact-icon {
+    width: 7.4rem;
+    height: 7.4rem;
+    margin-right: 1.5rem;
+  }
+  .contact-text {
+    .contact-title {
+      margin-bottom: 0.7rem;
+    }
+    // @media #{$md} {
+    //   h3 {
+    //     font-size: 1.7rem;
+    //   }
+    // }
+  }
+}

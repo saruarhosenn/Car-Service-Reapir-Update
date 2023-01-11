@@ -1,0 +1,66 @@
+/* 
+=========================================
+04. Typography CSS
+=========================================
+*/
+
+/*- Font Family -*/
+.primary-font-500 {
+  font-family: var(--primary-font-500);
+}
+
+.primary-font-400 {
+  font-family: var(--primary-font-400);
+}
+
+.secondary-font-700 {
+  font-family: var(--secondary-font-700);
+}
+
+.secondary-font-600 {
+  font-family: var(--secondary-font-600);
+}
+
+.secondary-font-500 {
+  font-family: var(--secondary-font-500);
+}
+
+.secondary-font-400 {
+  font-family: var(--secondary-font-400);
+}
+
+/* Font Size */
+.size-4xl {
+  font-size: var(--size-4xl);
+  line-height: 1.333;
+}
+
+.size-3xl {
+  font-size: var(--size-3xl);
+  line-height: 1.333;
+}
+
+.size-2xl {
+  font-size: var(--size-2xl);
+  line-height: 1.363;
+}
+
+.size-xl {
+  font-size: var(--size-xl);
+  line-height: 1.6;
+}
+
+.size-lg {
+  font-size: var(--size-lg);
+  line-height: 1.444;
+}
+
+.size-md {
+  font-size: var(--size-md);
+  line-height: 1.625;
+}
+
+.size-sm {
+  font-size: var(--size-sm);
+  line-height: 1.714;
+}

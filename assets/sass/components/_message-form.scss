@@ -1,0 +1,45 @@
+/* 07. Message Form CSS
+-------------------------*/
+.message-form {
+  padding: 8rem 3rem 2.4rem;
+  .red-shape {
+    position: absolute;
+    top: -2rem;
+    right: -22.5rem;
+    animation: hero-circle 8s linear 0s infinite alternate;
+    @keyframes hero-circle {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  .message-form-top {
+    width: 11.2rem;
+    height: 11.2rem;
+    position: absolute;
+    top: -5.7rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .message-input-wrap {
+    margin-bottom: 2rem;
+    padding: 1.4rem 2rem;
+    .message-input {
+      padding-right: 1rem;
+    }
+    .message-input,
+    .message-input::placeholder {
+      font-family: var(--secondary-font-400);
+      font-size: var(--size-sm);
+      color: var(--six-color);
+      line-height: 2.142;
+    }
+    .message-textarea {
+      height: 11.7rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+/* 11. Search Box CSS
+----------------------*/
+.search-card {
+  .search-card-form {
+    .search-card-input,
+    .search-card-input::placeholder {
+      font-family: var(--secondary-font-400);
+      font-size: var(--size-md);
+      color: var(--four-color);
+    }
+  }
+}

@@ -1,0 +1,133 @@
+/* 
+=========================================
+03. Reuseble Class CSS
+=========================================
+*/
+.section-y-space {
+  padding: 12rem 0;
+  @media #{$xsm} {
+    padding: 6rem 0;
+  }
+}
+
+.section-t-space {
+  padding-top: 11rem;
+  @media #{$xsm} {
+    padding-top: 5rem;
+  }
+}
+
+.section-t2-space {
+  padding-top: 12rem;
+  @media #{$xsm} {
+    padding-top: 6rem;
+  }
+}
+
+.section-b-space {
+  padding-bottom: 12rem;
+  @media #{$xsm} {
+    padding-bottom: 6rem;
+  }
+}
+
+.bg-class-1 {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.g-60 {
+  --bs-gutter-y: 6rem;
+  --bs-gutter-x: 6rem;
+}
+
+.border-gray {
+  border: 0.1rem solid var(--border-color1);
+}
+
+.redius-12 {
+  border-radius: 1.2rem;
+}
+
+.redius-8 {
+  border-radius: 0.8rem;
+}
+
+.redius-5 {
+  border-radius: 0.5rem;
+}
+
+.redius-4 {
+  border-radius: 0.4rem;
+}
+
+.xy-hideen {
+  overflow: hidden;
+}
+
+.x-hidden {
+  overflow-x: hidden;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-11 {
+  z-index: 11;
+}
+
+.z-index-111 {
+  z-index: 111;
+}
+
+.z-index-9 {
+  z-index: 9;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index-999 {
+  z-index: 999;
+}
+
+.zump-animation-1 {
+  animation: zump-1 4s infinite linear;
+}
+
+@keyframes zump-1 {
+  0% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(0, -6rem, 0);
+    transform: translate3d(0, -6rem, 0);
+  }
+
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+.t-linear {
+  -webkit-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+
+a,
+button,
+img,
+span,
+p,
+.t-ease-in-out {
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

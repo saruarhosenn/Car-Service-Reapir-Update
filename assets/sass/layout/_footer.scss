@@ -1,0 +1,48 @@
+/* 29. Footer CSS
+----------------------*/
+.footer {
+  padding-top: 12.1rem;
+  background: linear-gradient(rgba(27, 27, 27, 0.9), rgba(27, 27, 27, 0.9)),
+    url("../images/footer/footer-bg.png");
+  .top-container {
+    padding-bottom: 2.9rem;
+  }
+  .footer-page {
+    .footer-page-title {
+      margin-bottom: 2rem;
+    }
+    .footer-page-list {
+      .footer-page-item:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      .footer-page-item {
+        .footer-page-link:hover {
+          color: var(--third-color);
+        }
+        .home2-footer-page-link:hover {
+          color: var(--text-color1);
+        }
+      }
+    }
+    .footer-contact-btn {
+      margin-top: 2.5rem;
+      padding: 1rem;
+      max-width: 22.6rem;
+    }
+    .home2-footer-contact-btn:hover {
+      color: var(--primary-color);
+    }
+  }
+  .footer-bottom {
+    padding: 2.4rem 0;
+    border-top: 0.1rem solid var(--four-color);
+    .footer-social {
+      .footer-social-item:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+    .copyright-text {
+      margin-left: 1.4rem;
+    }
+  }
+}
