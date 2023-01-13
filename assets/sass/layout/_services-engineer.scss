@@ -1,0 +1,40 @@
+/* 03. Services Engineer CSS
+--------------------------------*/
+.services-engineer-section {
+  background-image: url("../images/services-engineer/services-engineer-sec-bg.jpg");
+}
+
+.services-engineer {
+  padding: 1.2rem 1.2rem 2.2rem;
+  &:hover {
+    transform: translateY(-0.6rem);
+  }
+  .services-engineer-img {
+    img {
+      border-radius: 0.2rem 0 0 0.2rem;
+    }
+    .services-engineer-social {
+      position: absolute;
+      left: 50%;
+      bottom: -1.8rem;
+      transform: translateX(-50%);
+      gap: 1rem;
+      .services-engineer-social-item {
+        .services-engineer-social-link {
+          width: 3.4rem;
+          height: 3.4rem;
+          border: 0.2rem solid var(--border-color2);
+          &:hover {
+            background-color: var(--secondary-bg);
+            img {
+                filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(50deg) brightness(500%) contrast(106%);
+            }
+          }
+        }
+      }
+    }
+  }
+  .services-engineer-info {
+    margin-top: 2.8rem;
+  }
+}

@@ -17,23 +17,62 @@
   text-transform: capitalize;
   border-radius: 0.4rem;
   background-color: var(--secondary-bg);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
   @media #{$lg} {
     padding: 1.4rem 2rem;
   }
 }
 
-.btn-hover:hover {
+.white-btn {
   background-color: var(--primary-bg);
   color: var(--third-color);
 }
 
-.white-btn {
+.btn-hover-white::after,
+.btn-hover-black::after,
+.btn-hover-red::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+  border-radius: 0.4rem;
+}
+
+.btn-hover-white:hover::after,
+.btn-hover-black:hover::after,
+.btn-hover-red:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-hover-white::after {
   background-color: var(--primary-bg);
+}
+
+.btn-hover-white:hover {
   color: var(--third-color);
-  &:hover {
-    background-color: var(--secondary-bg);
-    color: var(--secondary-color);
-  }
+}
+
+.btn-hover-black::after {
+  background-color: var(--third-bg);
+}
+
+.btn-hover-black:hover {
+  color: var(--secondary-color);
+}
+
+.btn-hover-red::after {
+  background-color: var(--secondary-bg);
+}
+
+.btn-hover-red:hover {
+  color: var(--secondary-color);
 }
 
 /*- Pulse Button -*/
@@ -69,7 +108,8 @@
     bottom: 0;
     content: "";
     z-index: 9;
-    border: 0.1rem solid var(--third-bg);
+    border: 0.1rem solid var(--primary-bg);
+    opacity: 0.46;
     z-index: 1;
     -webkit-animation: pulse-btn-animate 4s linear infinite;
     animation: pulse-btn-animate 4s linear infinite;

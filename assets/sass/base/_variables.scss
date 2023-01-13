@@ -2,7 +2,7 @@
 /*---------------------------------------------------------------------------------
 
     Theme Name: Car Service & Reapir
-    Author: Quomodosoft
+    Author: QuomodoSoft
     Support: https://support.quomodosoft.com/support/login
     Description: Car Service & Reapir HTML Template
     Version: 1.0
@@ -92,10 +92,16 @@
   --primary-bg: #ffffff;
   --secondary-bg: #ee2852;
   --third-bg: #1B1B1B;
+  --four-bg: #FFF1F4;
+  --five-bg: #F3F5F7;
 
   /*_________ Border Color _________*/
   --border-color1: #ededed;
+  --border-color2: #FDEAEE;
 }
+
+/* 20. Mechanical Work CSS
+------------------------------*/
 
 @media #{$xl} {
   :root {

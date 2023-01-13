@@ -1,0 +1,17 @@
+/* 20. About Us CSS
+------------------------*/
+.about-us-img {
+  .about-us-small-img {
+    position: absolute;
+    right: 0;
+    bottom: -7rem;
+    max-width: 23rem;
+  }
+}
+
+.transparent-text {
+  font-size: var(--size-4xl);
+  line-height: 1.15;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.2rem rgba(238, 40, 82, 0.3);
+}

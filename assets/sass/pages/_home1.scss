@@ -64,6 +64,61 @@
   }
 }
 
+.services-slider {
+  .services-slider-item-1 {
+    background-image: url("../images/services-slider/services-slider-1.jpg");
+  }
+  
+  .services-slider-item-2 {
+    background-image: url("../images/services-slider/services-slider-2.jpg");
+  }
+  
+  .services-slider-item-3 {
+    background-image: url("../images/services-slider/services-slider-3.jpg");
+  }
+  
+  .services-slider-item-4 {
+    background-image: url("../images/services-slider/services-slider-2.jpg");
+  }
+  .services-slider-item {
+    width: 100%;
+    min-height: 68rem;
+    overflow: hidden;
+    .services-slider-item-text {
+      max-width: 37.3rem;
+      padding: 2.3rem 2.5rem 3rem;
+      position: absolute;
+      right: 4rem;
+      bottom: -8rem;
+      background-color: rgba(238, 40, 82, 0.6);
+      opacity: 0;
+      visibility: hidden;
+      .services-slider-item-text-desc {
+        margin: 1.2rem 0 1.5rem;
+      }
+      .services-slider-item-text-link {
+        width: 3.5rem;
+        height: 3rem;
+        &:hover {
+          background-color: var(--secondary-bg);
+          img {
+            filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(50deg) brightness(500%) contrast(106%);
+          }
+        }
+      }
+    }
+    &:hover {
+      .services-slider-item-text {
+        opacity: 1;
+        visibility: visible;
+        bottom: 3.5rem;
+      }
+    }
+  }
+}
+
+
+
 .down-mark-line {
 	position: relative;
 	z-index: 2;

@@ -1,0 +1,125 @@
+/* 25. Packages CSS
+------------------------*/
+.packages-section {
+  .shape-left,
+  .shape-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .shape-left {
+    left: 0;
+  }
+  .shape-right {
+    right: 0;
+  }
+}
+
+.packages-slider {
+  & > div {
+    height: 100%;
+    & > div {
+      height: 100%;
+    }
+  }
+}
+
+.packages-slider-item {
+  .packages-slider-client-img {
+    background: url("../images/packages/packages-hover-img.jpg") no-repeat top
+      center / cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .packages-slider-client-desc::after {
+    content: "";
+    width: 6.8rem;
+    height: 4.8rem;
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: url("../images/icons/qoute.svg") no-repeat top / 6.8rem 4.8rem;
+  }
+  .packages-slider-star {
+    margin-top: 2.5rem;
+    margin-bottom: 3.3rem;
+    .packages-slider-star-item:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+  .packages-slider-overlay {
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(26, 36, 64, 0.85);
+  }
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 0 0.25rem;
+  }
+  button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--primary-bg);
+
+    text-indent: -9999px;
+  }
+  li.slick-active button {
+    background-color: var(--secondary-bg);
+  }
+}
+
+.packages-content {
+  padding: 1rem;
+  z-index: 99;
+  &:hover {
+    transform: translateY(-0.6rem);
+  }
+  .packages-title-wrap {
+    padding: 2.6rem 0 2.5rem;
+    border-radius: 0.8rem 0.8rem 0 0;
+    background-color: rgba(238, 40, 82, 0.08);
+  }
+  .packages-list {
+    margin-top: 3.3rem;
+    .packages-list-item {
+      img {
+        margin-right: 1.1rem;
+      }
+    }
+    .packages-list-item:not(:last-child) {
+      margin-bottom: 2.8rem;
+    }
+  }
+  .packages-btn-wrap {
+    margin-top: 3.2rem;
+    margin-bottom: 3rem;
+  }
+  .packages-car {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 6rem;
+    z-index: -9;
+    margin: auto;
+  }
+}
+

@@ -1,7 +1,7 @@
 /*---------------------------------------------------------------------------------
 
     Theme Name: Car Service & Reapir
-    Author: Quomodosoft
+    Author: QuomodoSoft
     Support: https://support.quomodosoft.com/support/login
     Description: Car Service & Reapir HTML Template
     Version: 1.0
@@ -86,10 +86,15 @@
   --primary-bg: #ffffff;
   --secondary-bg: #ee2852;
   --third-bg: #1B1B1B;
+  --four-bg: #FFF1F4;
+  --five-bg: #F3F5F7;
   /*_________ Border Color _________*/
   --border-color1: #ededed;
+  --border-color2: #FDEAEE;
 }
 
+/* 20. Mechanical Work CSS
+------------------------------*/
 @media only screen and (max-width: 1399px) {
   :root {
     --size-4xl: 5rem;
@@ -273,7 +278,7 @@ hr {
 }
 
 .section-t-space {
-  padding-top: 11rem;
+  padding-top: 12rem;
 }
 @media only screen and (max-width: 575px) {
   .section-t-space {
@@ -282,7 +287,7 @@ hr {
 }
 
 .section-t2-space {
-  padding-top: 12rem;
+  padding-top: 11rem;
 }
 @media only screen and (max-width: 575px) {
   .section-t2-space {
@@ -299,15 +304,24 @@ hr {
   }
 }
 
-.bg-class-1 {
+.bg-class {
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
+.section-title-wrap {
+  margin-bottom: 6.3rem;
+}
+
 .g-60 {
   --bs-gutter-y: 6rem;
   --bs-gutter-x: 6rem;
+}
+
+.g-55 {
+  --bs-gutter-y: 5.5rem;
+  --bs-gutter-x: 5.5rem;
 }
 
 .border-gray {
@@ -360,6 +374,41 @@ hr {
 
 .z-index-999 {
   z-index: 999;
+}
+
+.animated-border {
+  position: relative;
+}
+.animated-border::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  box-sizing: border-box;
+  height: 0;
+  border-bottom: 0.1rem solid transparent;
+  border-left: 0.1rem solid transparent;
+  transition: all 0.6s linear;
+  border-radius: 0.4rem;
+}
+.animated-border::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  box-sizing: border-box;
+  height: 0;
+  border-top: 0.1rem solid transparent;
+  border-right: 0.1rem solid transparent;
+  transition: all 0.6s linear;
+  border-radius: 0.4rem;
+}
+.animated-border:hover::before, .animated-border:hover::after {
+  border-color: var(--secondary-bg);
+  width: 100%;
+  height: 100%;
 }
 
 .zump-animation-1 {
@@ -505,6 +554,14 @@ p,
   background-color: var(--third-bg);
 }
 
+.four-bg {
+  background-color: var(--four-bg);
+}
+
+.five-bg {
+  background-color: var(--five-bg);
+}
+
 /* 
 =================================================
 Reuseble Components CSS
@@ -605,6 +662,9 @@ Reuseble Components CSS
   text-transform: capitalize;
   border-radius: 0.4rem;
   background-color: var(--secondary-bg);
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 1;
 }
 @media only screen and (max-width: 1199px) {
   .link-btn {
@@ -612,17 +672,53 @@ Reuseble Components CSS
   }
 }
 
-.btn-hover:hover {
-  background-color: var(--primary-bg);
-  color: var(--third-color);
-}
-
 .white-btn {
   background-color: var(--primary-bg);
   color: var(--third-color);
 }
-.white-btn:hover {
+
+.btn-hover-white::after,
+.btn-hover-black::after,
+.btn-hover-red::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s ease;
+  border-radius: 0.4rem;
+}
+
+.btn-hover-white:hover::after,
+.btn-hover-black:hover::after,
+.btn-hover-red:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+.btn-hover-white::after {
+  background-color: var(--primary-bg);
+}
+
+.btn-hover-white:hover {
+  color: var(--third-color);
+}
+
+.btn-hover-black::after {
+  background-color: var(--third-bg);
+}
+
+.btn-hover-black:hover {
+  color: var(--secondary-color);
+}
+
+.btn-hover-red::after {
   background-color: var(--secondary-bg);
+}
+
+.btn-hover-red:hover {
   color: var(--secondary-color);
 }
 
@@ -668,7 +764,8 @@ Reuseble Components CSS
   bottom: 0;
   content: "";
   z-index: 9;
-  border: 0.1rem solid var(--third-bg);
+  border: 0.1rem solid var(--primary-bg);
+  opacity: 0.46;
   z-index: 1;
   -webkit-animation: pulse-btn-animate 4s linear infinite;
   animation: pulse-btn-animate 4s linear infinite;
@@ -746,6 +843,8 @@ Reuseble Components CSS
 -------------------------*/
 .message-form {
   padding: 8rem 3rem 2.4rem;
+  max-width: 40.2rem;
+  margin-left: auto;
 }
 .message-form .red-shape {
   position: absolute;
@@ -874,6 +973,7 @@ Reuseble Layout CSS
   z-index: 999999;
   min-width: 20rem;
   padding: 1rem 0;
+  border-radius: 0.2rem;
   opacity: 0;
   visibility: hidden;
   border-top: 0.3rem solid var(--third-color);
@@ -980,7 +1080,7 @@ Reuseble Layout CSS
 }
 
 /* 20. Contact Bar CSS
-----------------------*/
+--------------------------*/
 .contact-location-time {
   padding-left: 2rem;
   padding-right: 2rem;
@@ -1008,6 +1108,229 @@ Reuseble Layout CSS
 }
 .contact .contact-text .contact-title {
   margin-bottom: 0.7rem;
+}
+
+/* 20. About Us CSS
+------------------------*/
+.about-us-img .about-us-small-img {
+  position: absolute;
+  right: 0;
+  bottom: -7rem;
+  max-width: 23rem;
+}
+
+.transparent-text {
+  font-size: var(--size-4xl);
+  line-height: 1.15;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 0.2rem rgba(238, 40, 82, 0.3);
+}
+
+/* 20. Services CSS
+-----------------------*/
+.services-section {
+  background-image: url("../images/services/services-sec-bg.jpg");
+}
+
+.services-card {
+  padding: 4rem 4.3rem 3.2rem;
+}
+.services-card:hover {
+  transform: translateY(-0.8rem);
+}
+.services-card .services-card-text .services-card-title {
+  margin: 3.3rem 0 1.3rem;
+}
+
+/* 20. Mechanical Work CSS
+------------------------------*/
+.mechanical-work-section {
+  background: linear-gradient(rgba(20, 34, 66, 0.88), rgba(20, 34, 66, 0.88)), url("../images/mechanical-work/mechanical-work-sec-bg.jpg") no-repeat top/cover;
+}
+
+.mechanical-work {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 2.4rem;
+}
+.mechanical-work:hover {
+  border-color: var(--secondary-bg);
+}
+.mechanical-work .mechanical-work-icon {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mechanical-work:hover .mechanical-work-icon {
+  background-color: var(--primary-bg);
+}
+.mechanical-work:hover .mechanical-work-icon img {
+  filter: invert(37%) sepia(99%) saturate(5850%) hue-rotate(335deg) brightness(98%) contrast(91%);
+}
+.mechanical-work .mechanical-work-text {
+  margin-top: 4.9rem;
+}
+.mechanical-work .mechanical-work-text .mechanical-work-text-title {
+  font-size: 4rem;
+  line-height: 1.4;
+}
+
+.mechanical-work-content {
+  max-width: 56rem;
+}
+
+/* 03. Services Engineer CSS
+--------------------------------*/
+.services-engineer-section {
+  background-image: url("../images/services-engineer/services-engineer-sec-bg.jpg");
+}
+
+.services-engineer {
+  padding: 1.2rem 1.2rem 2.2rem;
+}
+.services-engineer:hover {
+  transform: translateY(-0.6rem);
+}
+.services-engineer .services-engineer-img img {
+  border-radius: 0.2rem 0 0 0.2rem;
+}
+.services-engineer .services-engineer-img .services-engineer-social {
+  position: absolute;
+  left: 50%;
+  bottom: -1.8rem;
+  transform: translateX(-50%);
+  gap: 1rem;
+}
+.services-engineer .services-engineer-img .services-engineer-social .services-engineer-social-item .services-engineer-social-link {
+  width: 3.4rem;
+  height: 3.4rem;
+  border: 0.2rem solid var(--border-color2);
+}
+.services-engineer .services-engineer-img .services-engineer-social .services-engineer-social-item .services-engineer-social-link:hover {
+  background-color: var(--secondary-bg);
+}
+.services-engineer .services-engineer-img .services-engineer-social .services-engineer-social-item .services-engineer-social-link:hover img {
+  filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(50deg) brightness(500%) contrast(106%);
+}
+.services-engineer .services-engineer-info {
+  margin-top: 2.8rem;
+}
+
+/* 25. Packages CSS
+------------------------*/
+.packages-section .shape-left,
+.packages-section .shape-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.packages-section .shape-left {
+  left: 0;
+}
+.packages-section .shape-right {
+  right: 0;
+}
+
+.packages-slider > div {
+  height: 100%;
+}
+.packages-slider > div > div {
+  height: 100%;
+}
+
+.packages-slider-item .packages-slider-client-img {
+  background: url("../images/packages/packages-hover-img.jpg") no-repeat top center/cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.packages-slider-item .packages-slider-client-desc::after {
+  content: "";
+  width: 6.8rem;
+  height: 4.8rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url("../images/icons/qoute.svg") no-repeat top/6.8rem 4.8rem;
+}
+.packages-slider-item .packages-slider-star {
+  margin-top: 2.5rem;
+  margin-bottom: 3.3rem;
+}
+.packages-slider-item .packages-slider-star .packages-slider-star-item:not(:last-child) {
+  margin-right: 0.8rem;
+}
+.packages-slider-item .packages-slider-overlay {
+  padding: 3rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(26, 36, 64, 0.85);
+}
+
+.slick-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li {
+  margin: 0 0.25rem;
+}
+.slick-dots button {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--primary-bg);
+  text-indent: -9999px;
+}
+.slick-dots li.slick-active button {
+  background-color: var(--secondary-bg);
+}
+
+.packages-content {
+  padding: 1rem;
+  z-index: 99;
+}
+.packages-content:hover {
+  transform: translateY(-0.6rem);
+}
+.packages-content .packages-title-wrap {
+  padding: 2.6rem 0 2.5rem;
+  border-radius: 0.8rem 0.8rem 0 0;
+  background-color: rgba(238, 40, 82, 0.08);
+}
+.packages-content .packages-list {
+  margin-top: 3.3rem;
+}
+.packages-content .packages-list .packages-list-item img {
+  margin-right: 1.1rem;
+}
+.packages-content .packages-list .packages-list-item:not(:last-child) {
+  margin-bottom: 2.8rem;
+}
+.packages-content .packages-btn-wrap {
+  margin-top: 3.2rem;
+  margin-bottom: 3rem;
+}
+.packages-content .packages-car {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6rem;
+  z-index: -9;
+  margin: auto;
 }
 
 /* 28. Subscribe CSS
@@ -1140,6 +1463,52 @@ Reuseble Layout CSS
 .hom1-banner .banner-content .banner-btn .banner-btn-1 {
   margin-right: 2.5rem;
 }
+.services-slider .services-slider-item-1 {
+  background-image: url("../images/services-slider/services-slider-1.jpg");
+}
+.services-slider .services-slider-item-2 {
+  background-image: url("../images/services-slider/services-slider-2.jpg");
+}
+.services-slider .services-slider-item-3 {
+  background-image: url("../images/services-slider/services-slider-3.jpg");
+}
+.services-slider .services-slider-item-4 {
+  background-image: url("../images/services-slider/services-slider-2.jpg");
+}
+.services-slider .services-slider-item {
+  width: 100%;
+  min-height: 68rem;
+  overflow: hidden;
+}
+.services-slider .services-slider-item .services-slider-item-text {
+  max-width: 37.3rem;
+  padding: 2.3rem 2.5rem 3rem;
+  position: absolute;
+  right: 4rem;
+  bottom: -8rem;
+  background-color: rgba(238, 40, 82, 0.6);
+  opacity: 0;
+  visibility: hidden;
+}
+.services-slider .services-slider-item .services-slider-item-text .services-slider-item-text-desc {
+  margin: 1.2rem 0 1.5rem;
+}
+.services-slider .services-slider-item .services-slider-item-text .services-slider-item-text-link {
+  width: 3.5rem;
+  height: 3rem;
+}
+.services-slider .services-slider-item .services-slider-item-text .services-slider-item-text-link:hover {
+  background-color: var(--secondary-bg);
+}
+.services-slider .services-slider-item .services-slider-item-text .services-slider-item-text-link:hover img {
+  filter: invert(93%) sepia(7%) saturate(0%) hue-rotate(50deg) brightness(500%) contrast(106%);
+}
+.services-slider .services-slider-item:hover .services-slider-item-text {
+  opacity: 1;
+  visibility: visible;
+  bottom: 3.5rem;
+}
+
 .down-mark-line {
   position: relative;
   z-index: 2;

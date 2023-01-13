@@ -12,111 +12,53 @@
 */
 
 /* ====================================================
-                    01. Projects Slider JS  
+                    01. Services Slider JS  
 ======================================================= */
-var swiper = new Swiper(".projects-slider", {
-  slidesPerView: 1,
-  spaceBetween: 30,
-  loop: true,
-  speed: 2500,
-  grabCursor: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    992: {
-      slidesPerView: 2,
+$('.services-slider').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  speed: 1500,
+  arrows: false,
+  dots: false,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 3
+      }
     },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1
+      }
+    }
+  ]
 });
 
 /* ======================================================
-                  02. Mechanic Slider JS 
+                  02. Packages Slider JS 
   ======================================================= */
-var swiper = new Swiper(".mechanic-slider", {
-  slidesPerView: 1,
-  spaceBetween: 34,
-  loop: true,
-  speed: 2500,
-  grabCursor: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 2,
-    },
-    992: {
-      slidesPerView: 3,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
+  $('.packages-slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    speed: 1500,
+    arrows: false,
+    dots: true,
+    infinite: true
+  });
 
-/* ======================================================
-                 03. Testimonial Slider JS
-  ======================================================= */
-var swiper = new Swiper(".testimonial-slider", {
-  slidesPerView: 1,
-  spaceBetween: 25,
-  loop: true,
-  speed: 2500,
-  grabCursor: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
 
-/* ======================================================
-            04. Home 2 Car Service Repair Slider JS  
-  ======================================================= */
-var swiper = new Swiper(".car-service-repair-slider", {
-  slidesPerView: 1,
-  spaceBetween: 20,
-  loop: true,
-  speed: 2500,
-  grabCursor: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    425: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 3,
-    },
-    992: {
-      slidesPerView: 4,
-    },
-    1200: {
-      slidesPerView: 4,
-    },
-    1400: {
-      slidesPerView: 5,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination",
-  },
-});
 
 /* ======================================================= 
               05. Stop Slider Item On Hover JS 
   ======================================================== */
-$(".projects-slider").hover(
+$(".services-slider, .packages-slider").hover(
   function () {
     this.swiper.autoplay.stop();
     console.log("Slider Stop");
@@ -126,33 +68,4 @@ $(".projects-slider").hover(
     console.log("Slider Start");
   }
 );
-$(".mechanic-slider").hover(
-  function () {
-    this.swiper.autoplay.stop();
-    console.log("Slider Stop");
-  },
-  function () {
-    this.swiper.autoplay.start();
-    console.log("Slider Start");
-  }
-);
-$(".testimonial-slider").hover(
-  function () {
-    this.swiper.autoplay.stop();
-    console.log("Slider Stop");
-  },
-  function () {
-    this.swiper.autoplay.start();
-    console.log("Slider Start");
-  }
-);
-$(".car-service-repair-slider").hover(
-  function () {
-    this.swiper.autoplay.stop();
-    console.log("Slider Stop");
-  },
-  function () {
-    this.swiper.autoplay.start();
-    console.log("Slider Start");
-  }
-);
+

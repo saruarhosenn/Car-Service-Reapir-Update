@@ -1,0 +1,17 @@
+/* 20. Services CSS
+-----------------------*/
+.services-section {
+  background-image: url("../images/services/services-sec-bg.jpg");
+}
+
+.services-card {
+  padding: 4rem 4.3rem 3.2rem;
+  &:hover {
+    transform: translateY(-0.8rem);
+  }
+  .services-card-text {
+    .services-card-title {
+      margin: 3.3rem 0 1.3rem;
+    }
+  }
+}

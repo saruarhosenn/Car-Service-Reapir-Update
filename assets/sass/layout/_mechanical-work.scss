@@ -1,0 +1,43 @@
+/* 20. Mechanical Work CSS
+------------------------------*/
+.mechanical-work-section {
+  background: linear-gradient(rgba(20, 34, 66, 0.88), rgba(20, 34, 66, 0.88)),
+    url("../images/mechanical-work/mechanical-work-sec-bg.jpg") no-repeat top /
+      cover;
+}
+
+.mechanical-work {
+  border: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 2.4rem;
+  &:hover {
+    border-color: var(--secondary-bg);
+  }
+  .mechanical-work-icon {
+    width: 8rem;
+    height: 8rem;
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &:hover {
+    .mechanical-work-icon {
+      background-color: var(--primary-bg);
+      img {
+        filter: invert(37%) sepia(99%) saturate(5850%) hue-rotate(335deg)
+          brightness(98%) contrast(91%);
+      }
+    }
+  }
+  .mechanical-work-text {
+    margin-top: 4.9rem;
+    .mechanical-work-text-title {
+      font-size: 4rem;
+      line-height: 1.4;
+    }
+  }
+}
+
+.mechanical-work-content {
+  max-width: 56rem;
+}
